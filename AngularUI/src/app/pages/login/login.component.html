@@ -1,0 +1,22 @@
+
+<div class="parent">
+    <div class="container">
+        <div class="login-box">
+            <h2>Login</h2>
+            <form action="#">
+                <div class="input-box">
+                    <input type="text" [(ngModel)]="loginObj.user_code" name="user_code" required>
+                    <label>User Code</label>
+                </div>
+                <div class="input-box">
+                    <input type="password" [(ngModel)]="loginObj.user_password" name="user_password" required>
+                    <label>Password</label>
+                </div>
+                
+                <button type="button" class="btn" (click)="onLogin()" >Login</button>
+                 
+            </form>
+        </div>
+        
+    </div>
+</div>

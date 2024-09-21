@@ -1,0 +1,28 @@
+<div *ngIf="users && users.length > 0; else noUsers">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>User Code</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>User GID</th>
+          <th>Password</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users">
+          <td>{{ user.user_code }}</td>
+          <td>{{ user.user_firstname }}</td>
+          <td>{{ user.user_lastname }}</td>
+          <td>{{ user.user_gid }}</td>
+          <td>{{ user.user_password }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <!-- Message when no users found -->
+  <ng-template #noUsers>
+    <div>No users found.</div>
+  </ng-template>
+  
